@@ -1,4 +1,5 @@
 ---
+import BackArrow from "../components/BackArrow.astro";
 import Paragraph from "../components/Paragraph.astro";
 import PillBtn from "../components/PillBtn.astro";
 import Layout from "../layouts/Layout.astro";
@@ -14,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
     charlar sobre tecnología y desarrollo.
   </Paragraph>
 
-  <p class="text-gray-600 my-2">Puedes encontrarme en:</p>
+  <p class="text-gray-600 my-2 dark:text-gray-400">Puedes encontrarme en:</p>
 
   <ul class="ml-5 mt-3 flex gap-4 flex-row">
     <li>
@@ -37,4 +38,6 @@ import Layout from "../layouts/Layout.astro";
       </PillBtn>
     </li>
   </ul>
+
+  <BackArrow />
 </Layout>

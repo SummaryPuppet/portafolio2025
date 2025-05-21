@@ -1,0 +1,18 @@
+<button
+  id="back-arrow"
+  class="rounded-full
+  flex items-center justify-center
+  fixed top-5 left-5 pr-4.5 pl-2.5 pb-3 pt-0.5 md:pb-3.5 md:pt-0.5 md:pr-5.5 md:pl-3.5
+  shadow-md hover:shadow-lg
+  text-4xl md:text-6xl
+  transition duration-300"
+>
+  {"<"}
+</button>
+
+<script>
+  const backArrow = document.getElementById("back-arrow");
+  backArrow!.addEventListener("click", () => {
+    window.history.back();
+  });
+</script>
