@@ -1,5 +1,6 @@
-<button
-  id="back-arrow"
+<a
+  href={import.meta.env.BASE_URL}
+  data-astro-history="replace"
   class="rounded-full
   flex items-center justify-center
   fixed top-5 left-5 pr-4.5 pl-2.5 pb-3 pt-0.5 md:pb-3.5 md:pt-0.5 md:pr-5.5 md:pl-3.5
@@ -8,11 +9,4 @@
   transition duration-300"
 >
   {"<"}
-</button>
-
-<script>
-  const backArrow = document.getElementById("back-arrow");
-  backArrow!.addEventListener("click", () => {
-    window.history.back();
-  });
-</script>
+</a>
