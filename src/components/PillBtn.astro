@@ -30,10 +30,12 @@ const colorMap = {
 };
 
 const classColor = colorMap[color] || colorMap.blue;
+
+const link = import.meta.env.BASE_URL + href.slice(1);
 ---
 
 <a
-  href={href}
+  href={link}
   class={`
   ${classColor}
         border rounded-2xl py-1 px-2.5 transition duration-300 max-w-44 items-center flex justify-center max-h-10 text-center"
