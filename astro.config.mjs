@@ -8,5 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  base: '/portafolio2025/'
+  base: '/portafolio2025/',
+  trailingSlash: 'always',
 });
