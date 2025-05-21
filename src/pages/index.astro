@@ -1,16 +1,36 @@
 ---
-
+import H1 from "../components/H1.astro";
+import Paragraph from "../components/Paragraph.astro";
+import PillBtn from "../components/PillBtn.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Portfolio">
+  <img src="/profile.jpg" alt="profile image" class="rounded-full h-20 w-20" />
+  <H1>Adrian Salcedo</H1>
+
+  <nav class="flex gap-4 mt-4">
+    <PillBtn href="/sobre-mi" color="amber"> sobre mi </PillBtn>
+    <PillBtn href="/proyectos" color="red"> proyectos </PillBtn>
+    <PillBtn href="/contacto" color="green"> contacto </PillBtn>
+  </nav>
+
+  <section class="flex flex-col items-center justify-center mt-4 gap-3">
+    <Paragraph>
+      Hola, soy un desarrollador con más de 5 años de experiencia autodidacta,
+      actualmente estudiando Ingeniería de Sistemas. Me apasiona crear proyectos
+      con propósito, combinando tecnología con ideas que puedan generar impacto
+      real en la vida de las personas. Me especializo en el desarrollo
+      full-stack con tecnologías como JavaScript, TypeScript, React, Node.js,
+      MongoDB y Tauri.
+    </Paragraph>
+
+    <Paragraph>
+      Estoy trabajando en "Esperanza", una inteligencia artificial emocional que
+      reflexiona y recuerda, con el objetivo de humanizar la relación entre
+      personas y máquinas. Este portafolio es una muestra de lo que hago y de lo
+      que creo: que la programación puede ser una herramienta para construir
+      algo más que software. Gracias por visitar.
+    </Paragraph>
+  </section>
+</Layout>

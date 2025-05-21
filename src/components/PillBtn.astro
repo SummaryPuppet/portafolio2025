@@ -1,0 +1,45 @@
+---
+interface Props {
+  href: string;
+  color?:
+    | "blue"
+    | "red"
+    | "green"
+    | "amber"
+    | "emerald"
+    | "yellow"
+    | "purple"
+    | "black";
+  newTab?: boolean;
+}
+
+const { href, color = "blue", newTab = false } = Astro.props;
+
+const colorMap = {
+  blue: "border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white",
+  red: "border-red-400 text-red-400 hover:bg-red-400 hover:text-white",
+  green: "border-green-400 text-green-400 hover:bg-green-400 hover:text-white",
+  yellow:
+    "border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white",
+  purple:
+    "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white",
+  black: "border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white",
+  amber: "border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white",
+  emerald:
+    "border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white",
+};
+
+const classColor = colorMap[color] || colorMap.blue;
+---
+
+<a
+  href={href}
+  class={`
+  ${classColor}
+        border rounded-2xl py-1 px-2.5 transition duration-300 max-w-44 items-center flex justify-center max-h-10 text-center"
+      `}
+  target={newTab ? "_blank" : "_self"}
+  rel={newTab ? "noopener noreferrer" : undefined}
+>
+  <slot />
+</a>

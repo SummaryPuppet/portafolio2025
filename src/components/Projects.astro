@@ -1,0 +1,29 @@
+---
+import PillBtn from "./PillBtn.astro";
+
+const response = await fetch(
+  "https://api.github.com/users/SummaryPuppet/repos?per_page=100"
+);
+
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+}
+const data: Project[] = await response.json();
+---
+
+<section class="grid grid-cols-1 xl:grid-cols-3 w-3/4 gap-5 mb-5">
+  {
+    data.map((proyect) => (
+      <article class="grid gap-2 mt-5 h-40 place-items-center text-center shadow-md rounded-2xl bg-white hover:bg-gray-200 transition-all duration-300 dark:bg-gray-900 dark:hover:bg-gray-950">
+        <h2 class="text-xl font-bold">{proyect.name}</h2>
+        <p class="text-gray-600 dark:text-gray-400">{proyect.description}</p>
+        <PillBtn href={proyect.html_url} color="blue" newTab>
+          ver en github
+        </PillBtn>
+      </article>
+    ))
+  }
+</section>

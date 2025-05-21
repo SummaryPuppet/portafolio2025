@@ -1,0 +1,40 @@
+---
+import Paragraph from "../components/Paragraph.astro";
+import PillBtn from "../components/PillBtn.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+  <h1 class="text-2xl font-bold mb-5">Contacto</h1>
+
+  <Paragraph class="mb-5">
+    Si deseas ponerte en contacto conmigo, no dudes en escribirme a través de
+    mis redes sociales o enviarme un correo electrónico. Estoy abierto a
+    oportunidades de colaboración, proyectos interesantes o simplemente para
+    charlar sobre tecnología y desarrollo.
+  </Paragraph>
+
+  <p class="text-gray-600 my-2">Puedes encontrarme en:</p>
+
+  <ul class="ml-5 mt-3 flex gap-4 flex-row">
+    <li>
+      <PillBtn href="mailto:adrianmsv.aa@gmail.com" color="red" newTab
+        >gmail</PillBtn
+      >
+    </li>
+    <li>
+      <PillBtn
+        href="https://www.linkedin.com/in/adrian-salcedo-00a817241/"
+        color="blue"
+        newTab
+      >
+        linkedin
+      </PillBtn>
+    </li>
+    <li>
+      <PillBtn href="https://github.com/SummaryPuppet" color="black" newTab>
+        github
+      </PillBtn>
+    </li>
+  </ul>
+</Layout>

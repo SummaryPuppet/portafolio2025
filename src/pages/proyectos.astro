@@ -1,0 +1,26 @@
+---
+import Paragraph from "../components/Paragraph.astro";
+import Projects from "../components/Projects.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Proyectos">
+  <div class="flex flex-col items-center justify-center my-24 md:my-60">
+    <h1 class="text-2xl my-5 font-semibold">Proyectos</h1>
+
+    <section class="flex flex-col items-center justify-center gap-3">
+      <Paragraph>
+        Estos son algunos de los proyectos en los que he trabajado. Cada uno
+        representa un paso en mi viaje como desarrollador y una oportunidad para
+        aprender y crecer. Espero que encuentres algo que despierte tu interés o
+        curiosidad.
+      </Paragraph>
+      <Paragraph>
+        Si deseas más información sobre alguno de ellos, no dudes en
+        contactarme.
+      </Paragraph>
+    </section>
+  </div>
+
+  <Projects />
+</Layout>
