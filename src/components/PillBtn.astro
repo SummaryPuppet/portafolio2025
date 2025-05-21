@@ -31,7 +31,8 @@ const colorMap = {
 
 const classColor = colorMap[color] || colorMap.blue;
 
-const link = import.meta.env.BASE_URL + href.slice(1);
+const link =
+  import.meta.env.BASE_URL + href.slice(1) + (import.meta.env.DEV ? "/" : "");
 ---
 
 <a
